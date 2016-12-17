@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+    <meta charset="utf-8" />
+	<title>Min Lu HomePage</title>
+
+<head>
+	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+	<script src="lib/jquery-1.11.3.min.js"></script>
+	<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+	<!-- <link rel="stylesheet" href="lib/bootstrap/css/bootstrap-theme.min.css"> -->
+
+	 <script> 
+
+	 	$('.navbar li a').click(function(e) {
+	 		console.log(" click li");
+
+			// var x = $('.navbar li .active').removeClass('active');
+			// console.log(' previous active ', x.text());
+
+		 //    var $this = $(this);
+		 //    if (!$this.hasClass('active')) {
+		 //        $this.addClass('active');
+		 //    }
+
+		 //    var x = $this;
+			// console.log(' current active ', x.text());	
+
+		 //    e.preventDefault();
+		});
+
+		
+		function img1(x) {
+		    x.src = "img/lumin2.jpg";
+		}
+
+		function img2(x) {
+		    x.src = "img/lumin1.jpg";
+		}
+
+	    $(function(){
+	      $("#home").load("home.html"); 
+	    });
+
+	    $(function(){
+	      $("#project").load("project.html"); 
+	    });
+
+	    $(function(){
+	      $("#publication").load("publication.html"); 
+	    });
+
+	    $(function(){
+	      $("#collection").load("collection.html"); 
+	    });
+
+
+	    $(function(){
+	      $("#interest").load("interest.html"); 
+	    });
+
+	     $(function(){
+	     	console.log(" click blog ");
+	      $("#blog").load("Notes/index.html"); 
+	    });
+	    // $(function(){
+	    //   $("#includedContent").load("home.html"); 
+	    // });
+    </script> 
+</head>
+
+<body>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+
+			<div class="row">
+				
+				<div class="col-md-3">
+					<div class="imgNav">
+						<img id="profile" onmouseover="img1(this)" onmouseout="img2(this)" alt="Bootstrap Image Preview" class="img-circle" src="img/lumin1.jpg" style="width:150px;"/>
+					</div>
+				</div>
+
+				<div class="col-md-9">		
+
+					<div id="menu">
+					  <ul>
+					    <li> <a href="#home">Home</a></li>
+					   <!--  <li> <a href="#project">Project</a></li> -->
+					    <li> <a href="#publication">Publications</a></li>
+					    <li> <a href="#project">Projects</a></li>
+					    <!-- <li> <a href="#collection">Collection</a></li> -->
+					    <li> <a href="#interest">Interest</a></li>
+					    <!-- <li> <a href="/Notes/index.html">Blog</a></li> -->
+					  </ul>
+					</div>
+
+					<div id="home" class="par" style="height:600px"></div>
+				<!-- 	<div id="project" class="par"></div> -->
+					<div id="publication" class="par"></div>
+					<div id="project" class="par"></div>
+					<!-- <div id="collection" class="par"></div> -->
+					<div id="interest" class="par"></div>
+			</div>
+			<!-- <div id="includedContent"></div>			 -->
+	</div>
+</div>
+</body>
+</html>

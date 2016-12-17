@@ -1,0 +1,64 @@
+.left{
+	border: black 1px;
+}
+.right{
+	border: red 1px;
+}
+
+.imgNav {
+	position: fixed;
+	top: 20%;
+	left: 5%;
+	width: 100px;
+ 	 border-radius: 15px;
+}
+
+#menu {	
+	background: white;
+	left: 60%;
+	width: 100%;
+    position: fixed;    
+  	z-index: 100;
+}
+
+#menu ul {
+  list-style: none;
+  padding: 0px;
+}
+
+#menu li {
+  display: inline-block;
+  margin-left: 0px;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.par{
+	height:100%;
+	padding-right: 90px;
+	padding-top: 70px;
+}
+
+.grid {
+  background: #EEE;
+/*  max-width: 1200px;*/
+  max-width: 100%;
+}
+
+.grid-item {
+ /* width: 100%;*/
+  /*height: 100%;*/
+  float: left;
+  background: #D26;
+/*  border: 2px solid #333;*/
+  /*border-color: hsla(0, 0%, 0%, 0.5);*/
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.featurette{
+	margin-bottom: 10px;
+}
+
