@@ -13,6 +13,17 @@
 	<!-- 可选的Bootstrap主题文件（一般不用引入） -->
 	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
 	<!-- <link rel="stylesheet" href="lib/bootstrap/css/bootstrap-theme.min.css"> -->
+	<script>
+	
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-99082626-2', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
 
 	 <script> 
 
@@ -65,7 +76,7 @@
 
 	     $(function(){
 	     	console.log(" click blog ");
-	      $("#blog").load("Notes/index.html"); 
+	      $("#blog").load("blog/index.html"); 
 	    });
 	    // $(function(){
 	    //   $("#includedContent").load("home.html"); 
@@ -96,7 +107,7 @@
 					    <li> <a href="#project">Projects</a></li>
 					    <!-- <li> <a href="#collection">Collection</a></li> -->
 					    <li> <a href="#interest">Interest</a></li>
-					    <!-- <li> <a href="/Notes/index.html">Blog</a></li> -->
+					    <li> <a href="/blog/index.html">Blog</a></li>
 					  </ul>
 					</div>
 
