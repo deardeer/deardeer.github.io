@@ -5,12 +5,12 @@
 	border: red 1px;
 }
 
-.imgNav {
+.imgNav{
 	position: fixed;
 	top: 20%;
 	left: 5%;
 	width: 100px;
- 	 border-radius: 15px;
+ 	border-radius: 15px;
 }
 
 #menu {	
