@@ -13,6 +13,10 @@
  	border-radius: 15px;
 }
 
+.detail{
+  color:gray
+}
+
 #menu {	
 	background: white;
 	left: 60%;
