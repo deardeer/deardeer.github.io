@@ -103,3 +103,19 @@ footer ul {
     list-style: none;
 }
 
+.paperdiv{
+  display: flex;
+  padding-bottom: 1em;
+}
+
+.paperimg{
+  width: 12%;
+  height: auto;
+  padding-right: 1em
+}
+
+.paperyear{
+  padding: 0.2em;
+  border-bottom: solid 0.1em #cddc39;
+  color: #8bc34a;
+}
