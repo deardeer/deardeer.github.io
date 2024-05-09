@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Serif+SC&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    margin: 0;
+    background-color: #D9EDBF;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Barlow';
+    font-size: 15px;
+    p{
+        font-size: 15px;
+    }
+    a{
+        font-size: 15px;
+        text-decoration: none;
+    }
+
+    background-image: url('img/wc_16.jpg'); /* Set the background image */
+    background-size: cover; /* Scale the background image to cover the entire container */
+    background-position: center; /* Center the background image */
+}
+
+.div{
+    border: 1px solid #90D26D;
+}
+
+.content{
+    width: 50%;
+    // height: 100vh;
+    background-color: white;
+
+    .head{
+        // height: 20px;
+        background-color: #90D26D;
+        ul{
+            display: flex;
+            justify-content: space-around;
+            li{
+                list-style-type: none;
+                a{
+                    text-decoration: none;
+                    font-family: 'Roboto Condensed';
+                    color: white;
+                }
+            }
+        }
+        
+    }
+    
+    .hero{
+        display: flex;
+        .photodiv{
+            background-color: #D9EDBF;
+            width: 30%;
+            display: flex; /* 使用 Flexbox 布局 */
+            flex-direction: column;
+            justify-content: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
+            img{
+                width: 70%;
+                margin-top: 1em;
+            }
+            .namediv{
+                font-family: 'Noto Serif SC';
+                text-align: center;
+                margin-bottom: 1em;;
+                p{
+                    margin: 0;
+                }
+            }
+        }
+        .briefdiv{
+            width: 70%;
+            border: #90D26D solid 1px;
+          
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-left: 1.5em;
+            padding-right: 1.5em;
+            text-align: justify; /* 文本水平对齐，并且填充整个容器的宽度 */
+            // padding: 1.5em;
+            p{
+                line-height: 1.5;
+                a{
+                    color: #FF9800;
+                    text-decoration: none;
+                }
+            }
+            .contactdiv{
+                padding-bottom: 1em;                                
+                display: flex; /* 使用 Flexbox 布局 */
+                flex-direction: column;
+                // justify-content: center; /* 水平居中 */
+                // align-items: center; /* 垂直居中 */
+                a{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .main{
+        padding: 2em;
+        .selected_projects{
+            display: flex;
+            flex-direction: column;
+            .oneproject{
+                display: flex;
+                // border: 1px solid black;
+                .project_img{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    // border: #90D26D solid 1px;
+                    img{
+                        width: 90%;
+                        border: 0.5px solid gray;
+                        border-radius: 5px;
+                        // height: auto;
+                    }
+                }
+                .project_info{
+                    padding: 1em;
+                    // background-color: #90D26D;
+                    // font-size: 13px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center; /* 在主轴上水平居中 */
+                    p{
+                        margin: 0px;
+                        // font-size: 13px;
+                    }
+                    .pub_tag{
+                        border-radius: 10px;
+                        margin-right: 0.2em;
+                        padding: 0 0.5em 0.2em 0.5em;
+                        font-size: 0.8em;
+                        font-weight: 500;
+                        color: white;
+                        background-color: #FF9800;
+                    }
+                    .tvcg {
+                        background-color: #90D26D;
+                    }
+                    
+                    .project_title{
+                        // font-size: 15px;
+                        font-size: 1.2em;
+                        font-weight: 500;
+                    }
+                    .project_author{
+                        // margin-top: 1em;
+                        font-size: 0.9em;
+                        color: hsl(35, 74%, 14%);
+                        font-weight: 500;
+                        margin-bottom: 0.3em;
+                    }
+                    .paper_resource{
+                        font-size: 0.9em;
+                    }
+                    .paper_intro{
+                        // margin-top: 0.9em;
+                        font-size: 0.9em;
+                        font-weight: 200;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px){
+    .content{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+    .content {
+      width: 70%; /* 充满整个屏幕 */
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1500px) {
+    .content {
+      width: 50%; /* 充满整个屏幕 */
+    }
+}
