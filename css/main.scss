@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Serif+SC&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 body{
     margin: 0;
-    background-color: #D9EDBF;
+    background-color: #ecfbcf;
     display: flex;
     justify-content: space-around;
     font-family: 'Barlow';
@@ -21,9 +21,9 @@ body{
     background-position: center; /* Center the background image */
 }
 
-.div{
-    border: 1px solid #90D26D;
-}
+// .div{
+//     border: 1px solid #90D26D;
+// }
 
 .content{
     width: 50%;
@@ -41,6 +41,7 @@ body{
                 a{
                     text-decoration: none;
                     font-family: 'Roboto Condensed';
+                    font-size: 1.2em;
                     color: white;
                 }
             }
@@ -51,7 +52,8 @@ body{
     .hero{
         display: flex;
         .photodiv{
-            background-color: #D9EDBF;
+            // background-color: #D9EDBF;
+            border-bottom: #90D26D solid 1px;
             width: 30%;
             display: flex; /* 使用 Flexbox 布局 */
             flex-direction: column;
@@ -72,7 +74,7 @@ body{
         }
         .briefdiv{
             width: 70%;
-            border: #90D26D solid 1px;
+            border-bottom: #90D26D solid 1px;
           
             display: flex;
             flex-direction: column;
