@@ -4,8 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Serif+SC&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
 body {
   margin: 0;
-  background-color: #ecfbcf;
-  background-image: url("./img/background_green.png");
+  background-color: #e0f2f1;
   background-size: cover; /* 这会确保图片铺满整个body */
   background-repeat: no-repeat; /* 防止图片重复 */
   display: flex;
@@ -27,6 +26,7 @@ body a {
 }
 .content .head {
   background-color: #90D26D;
+  display: fixed;
 }
 .content .head ul {
   display: flex;
@@ -40,6 +40,15 @@ body a {
   font-family: "Roboto Condensed";
   font-size: 1.2em;
   color: white;
+}
+.content .head ul li .nav-button:hover {
+  background-color: #2e7d32;
+  transition: background-color 0.3s ease;
+}
+.content .head ul li .nav-button.active {
+  background-color: #ffc107;
+  color: white;
+  transition: background-color 0.3s ease;
 }
 .content .hero {
   display: flex;
@@ -92,34 +101,34 @@ body a {
 .content .main {
   padding: 2em;
 }
-.content .main .selected_projects {
+.content .main .projects {
   display: flex;
   flex-direction: column;
 }
-.content .main .selected_projects .oneproject {
+.content .main .projects .oneproject {
   display: flex;
 }
-.content .main .selected_projects .oneproject .project_img {
+.content .main .projects .oneproject .project_img {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.content .main .selected_projects .oneproject .project_img img {
+.content .main .projects .oneproject .project_img img {
   width: 90%;
   border: 0.5px solid gray;
   border-radius: 5px;
 }
-.content .main .selected_projects .oneproject .project_info {
+.content .main .projects .oneproject .project_info {
   padding: 1em;
   display: flex;
   flex-direction: column;
   justify-content: center; /* 在主轴上水平居中 */
 }
-.content .main .selected_projects .oneproject .project_info p {
+.content .main .projects .oneproject .project_info p {
   margin: 0px;
 }
-.content .main .selected_projects .oneproject .project_info .pub_tag {
+.content .main .projects .oneproject .project_info .pub_tag {
   border-radius: 10px;
   margin-right: 0.2em;
   padding: 0 0.5em 0.2em 0.5em;
@@ -128,25 +137,54 @@ body a {
   color: white;
   background-color: #FF9800;
 }
-.content .main .selected_projects .oneproject .project_info .tvcg {
+.content .main .projects .oneproject .project_info .tvcg {
   background-color: #90D26D;
 }
-.content .main .selected_projects .oneproject .project_info .project_title {
+.content .main .projects .oneproject .project_info .arxiv {
+  background-color: #3f51b5;
+}
+.content .main .projects .oneproject .project_info .project_title {
   font-size: 1.2em;
   font-weight: 500;
 }
-.content .main .selected_projects .oneproject .project_info .project_author {
+.content .main .projects .oneproject .project_info .project_author {
   font-size: 0.9em;
   color: hsl(35, 74%, 14%);
   font-weight: 500;
   margin-bottom: 0.3em;
 }
-.content .main .selected_projects .oneproject .project_info .paper_resource {
+.content .main .projects .oneproject .project_info .paper_resource {
   font-size: 0.9em;
 }
-.content .main .selected_projects .oneproject .project_info .paper_intro {
+.content .main .projects .oneproject .project_info .paper_intro {
   font-size: 0.9em;
   font-weight: 200;
+}
+.content .main .paintings {
+  display: flex;
+  flex-direction: column;
+}
+.content .main .paintings .controls {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  right: 25%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.content .main .paintings .controls button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%; /* 将正方形变为圆形 */
+  background-color: #ecfbcf;
+  color: #2e7d32;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.content .main .paintings .controls button:hover {
+  background-color: #90D26D;
 }
 
 @media screen and (max-width: 600px) {

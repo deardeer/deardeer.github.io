@@ -10,12 +10,12 @@
     <div class="content">
         <div class="head">
             <ul>
-                <li> <a href="#home" style="height:100%">Home</a></li>
+                <li> <a href="#home" style="height:100%" class="nav-button active">Home</a></li>
                <!--  <li> <a href="#project">Project</a></li> -->
-                <li> <a href="#group">Group</a></li>
-                <li> <a href="#publication">Publication</a></li>
+                <li> <a href="#group" class="nav-button">Group</a></li>
+                <li> <a href="#publication" class="nav-button">Publication</a></li>
                 <!-- <li> <a href="#collection">Collection</a></li> -->
-                <li> <a href="interest.html">Painting</a></li>
+                <li> <a href="interest.html" class="nav-button">Painting</a></li>
             </ul>
         </div>
         <div class="hero">
@@ -57,7 +57,6 @@
                 </div>
             </div>
         </div>
-
         <div class="main">
             <div class="update">
                 <b>Updates</b>
@@ -69,19 +68,41 @@
                 </ul>
             </div>
 
-            <div class="selected_projects">
+            <div class="projects">
                 
                 <b>Selected Projects</b>
+
+                <div class="oneproject">
+                    <div class="project_img">
+                        <img src="project_img/pro_collage.png"/>
+                    </div>
+                    <div class="project_info">
+                        <p class="project_title"> A Versatile Collage Visualization Technique</p>
+                        <!-- <br> -->
+                        <p class="project_author">Zhenyu Wang, Daniel Cohen-Or, and Min Lu*</p>
+                        <p><span class='pub_tag arxiv'>Arxiv</span>
+                       
+                        <br>
+                        [<a href="https://arxiv.org/abs/2406.04008"> Paper (4.6 MB)</a>] 
+                        [<a href="https://szuviz.github.io/pixel-space-collage-technique/"> Project Homepage</a>]
+                        <!-- [<a href="pub/StickyLinks2024_minlu.mp4"> My Talk at PacificVis 2024 (32.4 MB)</a>] -->
+                        </p>
+                        <p class="paper_intro"> We introduce a versatile image-space collage technique designed to pack geometric elements into a given shape, and demonstrate its diverse visual expressiveness in various applications.
+                        <br>
+                    </div>
+                </div>
+
 
                 <div class="oneproject">
                     <div class="project_img">
                         <img src="project_img/pro_spikes.png"/>
                     </div>
                     <div class="project_info">
-                        <p class="project_title">Sticky Links: Encoding Quantitative Data of Graph Edges</p>
+                        <p class="project_title"> <img src="img/trophy.png" style="height:20px"> Sticky Links: Encoding Quantitative Data of Graph Edges</p>
                         <!-- <br> -->
                         <p class="project_author">Min Lu*, Xiangfang Zeng, Joel Lanir, Xiaoqin Sun, Guozheng Li, Daniel Cohen-Or, and Hui Huang</p>
                         <p><span class='pub_tag'>PacificVis</span><span class='pub_tag tvcg'>TVCG</span>IEEE Transactions on Visualization and Computer Graphics, 2024.
+                       
                         <br>
                         [<a href="pub/TVCG2024_Stickylinks.pdf"> Paper (0.4 MB)</a>] 
                         [<a href="https://github.com/SZUVIZ/StickyLinks"> Source Code (Python)</a>]
@@ -166,11 +187,25 @@
                     </div>
             </div>
 
-
-
-            </div>
+        </div>
 
         </div>
     </div>
 </body>
+
+<script>
+    // 获取所有导航按钮
+    const navButtons = document.querySelectorAll('.nav-button');
+
+    // 为每个按钮添加点击事件监听器
+    navButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // 移除其他按钮的激活状态
+            navButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // 为当前点击的按钮添加激活状态
+            this.classList.add('active');
+        });
+    });
+</script>
 </html>

@@ -1,67 +1,73 @@
 <!DOCTYPE html>
-<html>
-<meta charset="utf-8" />
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="style.css">
-
-	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-	<script src="lib/jquery-1.11.3.min.js"></script>
-	<!-- 可选的Bootstrap主题文件（一般不用引入） -->
-	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
-
-	<script src="/path/to/masonry.pkgd.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
 </head>
-<body>
-		<div class="row" style="margin:20px">			
-			<h2>
-				Painting
-			</h2>
-			In my free time, I do some watercoloring : ). Some 
-			casual video shooting pieces by UAV <a href="uavvideo.html"> >> </a> 
-			Some earlier painting <a href="painting2.html"> >> </a> 
-			<br>
-			<div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 160 }' style>	
-				<div class="grid-item">
-					<img alt="Bootstrap Image Preview" class="img-thumbnail img-responsive wcimg" src="img/wc_17
-					.png" /></div>
-				<div class="grid-item">
-					<img alt="Bootstrap Image Preview" class="img-thumbnail img-responsive wcimg" src="img/wc_18
-					.png" /></div>
-				<div class="grid-item">
-					<img alt="Bootstrap Image Preview" class="img-thumbnail img-responsive wcimg" src="img/wc_16
-					.png" /></div>
-			  <div class="grid-item">
-				<img alt="Bootstrap Image Preview" class="img-thumbnail img-responsive wcimg" src="img/wc_14.jpg" /></div>
-			<div class="grid-item">
-				<img alt="Bootstrap Image Preview" class="img-thumbnail img-responsive wcimg" src="img/wc_15.jpg" /></div>
+<body>    
+    <div class="content">
+        <div class="head">
+            <ul>
+                <li> <a href="index.html" style="height:100%" class="nav-button">Home</a></li>
+               <!--  <li> <a href="#project">Project</a></li> -->
+                <li> <a href="#group" class="nav-button">Group</a></li>
+                <li> <a href="publication.html" class="nav-button">Publication</a></li>
+                <!-- <li> <a href="#collection">Collection</a></li> -->
+                <li> <a href="interest.html" class="nav-button active">Painting</a></li>
+            </ul>
+        </div>
+        <div class="main">
 
-			  <div class="grid-item">
-				<img alt="Bootstrap Image Preview" class="img-thumbnail img-responsive wcimg" src="img/wc_8.jpg" /></div>
-			<div class="grid-item">
-				<img alt="Bootstrap Image Preview" class="img-thumbnail img-responsive wcimg" src="img/wc_12.jpg" /></div>
-			<div class="grid-item">
-				<img alt="Bootstrap Image Preview" class="img-thumbnail img-responsive wcimg" src="img/wc_13.jpg" /></div>		
-			  <div class="grid-item">			 
-				<img alt="Bootstrap Image Preview" class="img-thumbnail img-responsive wcimg" src="img/wc_1.jpg" /></div>
-			  <div class="grid-item">
-				<img alt="Bootstrap Image Preview" class="img-thumbnail img-responsive wcimg" src="img/wc_2.jpg" /></div>
-			  <div class="grid-item">
-				<img alt="Bootstrap Image Preview" class="img-thumbnail img-responsive wcimg"  src="img/wc_3.jpg" /></div>
+            <div class="paintings">
+                
+                <p>In my free time, I like to do some watercoloring : ).</p>
 
-			  <div class="grid-item">
-				<img alt="Bootstrap Image Preview" class="img-thumbnail img-responsive wcimg" src="img/wc_4.jpg" /></div>
-			  <div class="grid-item">
-				<img alt="Bootstrap Image Preview" class="img-thumbnail img-responsive wcimg" src="img/wc_6.JPG" /></div>
-			  <div class="grid-item">
-				<img alt="Bootstrap Image Preview" class="img-thumbnail img-responsive wcimg" src="img/wc_10.jpg" /></div>
+                <img id="photo" src="img/wc_17.png" />
+                <div class="controls">
+                    <button id="prev"><</button>
+                    <button id="next">></button>
+                </div>
 
-			  <div class="grid-item">
-				<img alt="Bootstrap Image Preview" class="img-thumbnail img-responsive wcimg" src="img/wc_5.jpg" /></div>
-			  <div class="grid-item">
-				<img alt="Bootstrap Image Preview" class="img-thumbnail img-responsive wcimg" src="img/wc_7.jpg" /></div>
-			  <div class="grid-item">
-				<img alt="Bootstrap Image Preview" class="img-thumbnail img-responsive wcimg" src="img/wc_9.jpg" /></div>
-		    </div>
+            </div>
+        </div>
+    </div>
 </body>
+<script>
+    // 照片数组
+    const photos = [
+    'img/wc_17.png',
+    'img/wc_16.png',
+    'img/wc_15.jpg',
+    'img/wc_14.jpg',
+    'img/wc_9.jpg',
+    'img/wc_8.jpg',
+    ];
+
+    // 当前显示的照片索引
+    let currentPhotoIndex = 0;
+
+    // 获取DOM元素
+    const photoElement = document.getElementById('photo');
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+
+    // 显示当前照片
+    function showPhoto(index) {
+    photoElement.src = photos[index];
+    }
+
+    // 上一张按钮事件
+    prevButton.addEventListener('click', () => {
+    currentPhotoIndex = (currentPhotoIndex > 0) ? currentPhotoIndex - 1 : photos.length - 1;
+    showPhoto(currentPhotoIndex);
+    });
+
+    // 下一张按钮事件
+    nextButton.addEventListener('click', () => {
+    currentPhotoIndex = (currentPhotoIndex < photos.length - 1) ? currentPhotoIndex + 1 : 0;
+    showPhoto(currentPhotoIndex);
+    });
+</script>
 </html>

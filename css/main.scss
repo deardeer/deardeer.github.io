@@ -3,8 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Serif+SC&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 body{
     margin: 0;
-    background-color: #ecfbcf;
-    background-image: url('./img/background_green.png'); 
+    background-color: #e0f2f1;
+    // background-image: url('./img/background_green.png'); 
+    // background: rgba(0,0,0,0.5) url('./img/background_green.png');
     background-size: cover; /* 这会确保图片铺满整个body */
     background-repeat: no-repeat; /* 防止图片重复 */
     display: flex;
@@ -32,6 +33,7 @@ body{
     .head{
         // height: 20px;
         background-color: #90D26D;
+        display: fixed;
         ul{
             display: flex;
             justify-content: space-around;
@@ -42,6 +44,16 @@ body{
                     font-family: 'Roboto Condensed';
                     font-size: 1.2em;
                     color: white;
+                }
+                .nav-button:hover {
+                    background-color: #2e7d32;
+                    transition: background-color 0.3s ease;
+                }
+                
+                .nav-button.active {
+                    background-color: #ffc107;
+                    color: white;
+                    transition: background-color 0.3s ease;
                 }
             }
         }
@@ -104,7 +116,7 @@ body{
 
     .main{
         padding: 2em;
-        .selected_projects{
+        .projects{
             display: flex;
             flex-direction: column;
             .oneproject{
@@ -146,6 +158,10 @@ body{
                     .tvcg {
                         background-color: #90D26D;
                     }
+
+                    .arxiv{
+                        background-color: #3f51b5;
+                    }
                     
                     .project_title{
                         // font-size: 15px;
@@ -167,6 +183,36 @@ body{
                         font-size: 0.9em;
                         font-weight: 200;
                     }
+                }
+            }
+        }
+        .paintings{
+            display: flex;
+            flex-direction: column;
+         
+            .controls {
+                position: absolute;
+                top: 50%;
+                // bottom: 10px;
+                left: 25%;
+                right: 25%;
+                display: flex;
+                justify-content: space-between;
+                padding: 0 20px;
+                button {
+                    width: 30px;
+                    height: 30px;
+                    // padding: 10px 20px;
+                    border-radius: 50%; /* 将正方形变为圆形 */
+                    background-color: #ecfbcf;
+                    color: #2e7d32;
+                    border: none;
+                    // border-radius: 4px;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                }
+                button:hover {
+                    background-color: #90D26D;
                 }
             }
         }
