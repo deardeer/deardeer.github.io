@@ -114,6 +114,38 @@ body{
         }
     }
 
+    .groupmember{
+        .peoplediv{
+            // .divline{
+            //     border-bottom: #90D26D solid 1px;
+            // }
+            display: flex;
+            flex-direction: row;
+            .photodiv{
+                // background-color: #D9EDBF;
+                width: 20%;
+                display: flex; /* 使用 Flexbox 布局 */
+                flex-direction: column;
+                // justify-content: center; /* 水平居中 */
+                align-items: center; /* 垂直居中 */
+                img{
+                    width: 70%;
+                    margin-top: 1em;
+                    border-radius: 50%;
+                }
+                .namediv{
+                    font-family: 'Noto Serif SC';
+                    text-align: center;
+                    margin-bottom: 1em;;
+                    p{
+                        font-size: 13px;
+                        margin: 0;
+                    }
+                }
+            }
+        }       
+    }
+
     .main{
         padding: 2em;
         .projects{

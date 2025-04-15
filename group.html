@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>    
+    <div class="content">
+        <div class="head">
+            <ul>
+                <li> <a href="index.html" style="height:100%" class="nav-button">Home</a></li>
+               <!--  <li> <a href="#project">Project</a></li> -->
+                <li> <a href="#group" class="nav-button active">Group</a></li>
+                <!-- <li> <a href="publication.html" class="nav-button">Publication</a></li> -->
+                <!-- <li> <a href="#collection">Collection</a></li> -->
+                <li> <a href="interest.html" class="nav-button ">Painting</a></li>
+            </ul>
+        </div>
+
+        <div class="main">
+
+            <div class="groupmember">                
+                <p class="section-head">Professor</p>
+
+                <div class="peoplediv divline">
+                    <div class="photodiv">
+                        <img src="./group/lumin.jpg" alt="">
+                        <div class='namediv'>
+                            <p style="margin-top: 0.25em;"> Min Lu </p>                    
+                            <p >陆 旻</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="groupmember">                
+                <p class="section-head">Master's Students</p>
+
+                    <div class="peoplediv">
+                        <div class="photodiv">
+                            <img src="./group/jianxihuang.png" alt="">
+                            <div class='namediv'>
+                                <p style="margin-top: 0.25em;"> Jianxi Huang </p>                    
+                                <p >黄键熙</p>
+                        </div>
+                    </div>
+
+                    <div class="photodiv">
+                        <img src="./group/zhenyuwang.png" alt="">
+                        <div class='namediv'>
+                            <p style="margin-top: 0.25em;"> Zhenyu Wang </p>                    
+                            <p >王振宇</p>
+                        </div>
+                    </div>
+
+                    <div class="photodiv">
+                        <img src="./group/yutingdeng.png" alt="">
+                        <div class='namediv'>
+                            <p style="margin-top: 0.25em;"> Yuting Deng </p>                    
+                            <p >邓雨婷</p>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="peoplediv">
+
+                    <div class="photodiv">
+                        <img src="./group/xinghuifu.png" alt="">
+                        <div class='namediv'>
+                            <p style="margin-top: 0.25em;"> Xinhui Fu</p>                    
+                            <p >傅星辉</p>
+                        </div>
+                    </div>
+
+
+                    <div class="photodiv">
+                        <img src="./group/manhongcai.png" alt="">
+                        <div class='namediv'>
+                            <p style="margin-top: 0.25em;"> Manhong Cai</p>                    
+                            <p >蔡曼洪</p>
+                        </div>
+                    </div>
+
+                    <div class="photodiv">
+                        <img src="./group/yanhuiguo.png" alt="">
+                        <div class='namediv'>
+                            <p style="margin-top: 0.25em;"> Yanhui Guo</p>                    
+                            <p >郭艳辉</p>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                   
+             </div>
+
+                
+
+        </div>
+    </div>
+</body>
+<script>
+    // 照片数组
+    const photos = [
+    'img/wc_17.png',
+    'img/wc_16.png',
+    'img/wc_15.jpg',
+    'img/wc_14.jpg',
+    'img/wc_9.jpg',
+    'img/wc_8.jpg',
+    ];
+
+    // 当前显示的照片索引
+    let currentPhotoIndex = 0;
+
+    // 获取DOM元素
+    const photoElement = document.getElementById('photo');
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+
+    // 显示当前照片
+    function showPhoto(index) {
+    photoElement.src = photos[index];
+    }
+
+    // 上一张按钮事件
+    prevButton.addEventListener('click', () => {
+    currentPhotoIndex = (currentPhotoIndex > 0) ? currentPhotoIndex - 1 : photos.length - 1;
+    showPhoto(currentPhotoIndex);
+    });
+
+    // 下一张按钮事件
+    nextButton.addEventListener('click', () => {
+    currentPhotoIndex = (currentPhotoIndex < photos.length - 1) ? currentPhotoIndex + 1 : 0;
+    showPhoto(currentPhotoIndex);
+    });
+</script>
+</html>
