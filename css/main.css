@@ -165,13 +165,16 @@ body a {
   background-color: #90D26D;
 }
 .content .main .projects .oneproject .project_info .chi {
-  background-color: #e32eb9;
+  background-color: #3f51b5;
 }
 .content .main .projects .oneproject .project_info .cvpr {
   background-color: #39b4e5;
 }
 .content .main .projects .oneproject .project_info .arxiv {
   background-color: #3f51b5;
+}
+.content .main .projects .oneproject .project_info .siggraph {
+  background-color: #e32eb9;
 }
 .content .main .projects .oneproject .project_info .project_title {
   font-size: 1.2em;
