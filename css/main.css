@@ -193,6 +193,9 @@ body a {
   font-size: 0.9em;
   font-weight: 200;
 }
+.content .main .projects .oneproject .project_info .linka {
+  margin-right: 5px;
+}
 .content .main .paintings {
   display: flex;
   flex-direction: column;
