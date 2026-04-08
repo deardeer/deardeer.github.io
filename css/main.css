@@ -101,9 +101,12 @@ body a {
 .content .groupmember .peoplediv {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 .content .groupmember .peoplediv .photodiv {
-  width: 20%;
+  flex: 0 0 calc(20% - 10px); /* 4 per row, accounting for gap */
+  width: 10%;
   display: flex; /* 使用 Flexbox 布局 */
   flex-direction: column;
   align-items: center; /* 垂直居中 */
@@ -118,6 +121,12 @@ body a {
   text-align: center;
   margin-bottom: 1em;
 }
+.content .groupmember .peoplediv .photodiv .namediv .peoplename {
+  font-size: 12px;
+}
+.content .groupmember .peoplediv .photodiv .namediv .studenttype {
+  font-size: 10px;
+}
 .content .groupmember .peoplediv .photodiv .namediv p {
   font-size: 13px;
   margin: 0;
@@ -128,6 +137,41 @@ body a {
 .content .main .projects {
   display: flex;
   flex-direction: column;
+}
+.content .main .projects .checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  height: 100%; /* 如果需要，可以根据父容器高度调整 */
+}
+.content .main .projects .pub_tag {
+  border-radius: 10px;
+  margin-right: 0.2em;
+  padding: 0 0.5em 0.2em 0.5em;
+  font-size: 0.8em;
+  font-weight: 500;
+  color: white;
+  background-color: #FF9800;
+}
+.content .main .projects .count {
+  background-color: rgb(28, 28, 28);
+}
+.content .main .projects .favo {
+  background-color: #90D26D;
+}
+.content .main .projects .tvcg {
+  background-color: #90D26D;
+}
+.content .main .projects .chi {
+  background-color: #3f51b5;
+}
+.content .main .projects .cvpr {
+  background-color: #39b4e5;
+}
+.content .main .projects .arxiv {
+  background-color: #3f51b5;
+}
+.content .main .projects .siggraph {
+  background-color: #e32eb9;
 }
 .content .main .projects .oneproject {
   display: flex;

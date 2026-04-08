@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/main.css">
+    <!-- Metro UI CSS -->
+    <!-- <link rel="stylesheet" href="https://cdn.metroui.org.ua/current/metro.css"> -->
 </head>
 <body>    
     <div class="content">
@@ -30,7 +32,7 @@
                 <p>
                     Hi! I am now an associate professor at Shenzhen University. I lead the <a style="color: rgb(3, 178, 3); font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" href="group.html">Spatial Creative Intelligence & Interaction (SCII, /skaɪ/) research group </a> in Shenzhen University. 
                     The passion of our group lays in the AI generation of creative spatial visualizations, mainly stylized maps and map-related spatial applications. 
-                    Our latest work towards our passion are <a  style="color: rgb(3, 178, 3)" href="https://szuviz.github.io/layered_vectorization/"">Layered Image Vectorization</a>, <a  style="color: rgb(3, 178, 3)" href="https://szuviz.github.io/pixel-space-Sun, Zhida, Xiaodong Wang, Zhenyao Zhang, Min Lu, Dani Lischinski, Daniel Cohen-Or, and Hui Huang. "Iconix: Controlling Semantics and Style in Progressive Icon Grids Generation." arXiv preprint arXiv:2602.00738 (2026).-technique/">Image-space Collage</a>. 
+                    Our latest work towards our passion are <a  style="color: rgb(3, 178, 3)" href="https://szuviz.github.io/layered_vectorization/"">Layered Image Vectorization</a>, <a  style="color: rgb(3, 178, 3)" href="https://szuviz.github.io/pixel-space-collage-technique/">Image-space Collage</a>. 
                     I received my Ph.D degree in Computer Science from Peking University in 2017. Before, I have several works in general visualization and visual analytics: (1) design intuitive visualization, e.g., <a href="https://deardeer.github.io/pub/InfoVis19_Winglet.pdf">Winglets</a>, 
                     <a href="https://github.com/SZUVIZ/StickyLinks">Sticky Links</a>,
                     <a href="http://vis.pku.edu.cn/interaction+/">Interaction+</a>. 
@@ -65,7 +67,6 @@
             <div class="update">
                 <p class="section-head">News</p>
                 <ul>
-                    <li><p style="display: inline; color: green">2026.Mar</p> Our work <i>Iconix</i> is accepted in CHI 2026 and <i>Cycle-Consistent Image Decomposition</i> is accepted in CVPR 2026!
                     <li><p style="display: inline; color: green">2025.Api</p> Our work <i>Image-space Collage</i> is conditionally accepted in SIGGraph 2025, congratulations to Zhenyu!
                     <li><p style="display: inline; color: green">2025.Feb</p> Our work <i>Layered Vectorizatoin</i> is accepted in CVPR 2025, congratulations to Zhenyu and Jianxi! </li>
                     <li><a style="display: inline; color: green" href="news.html">... more >> </a></li>
@@ -74,8 +75,45 @@
 
             <div class="projects">
                 
-                <p class="section-head">Recent Projects</p>      
-                
+              <div style="display: flex; align-items: center; gap: 20px;">
+                <p class="section-head">Recent Projects</p>
+
+                <div class="checkbox-wrapper">
+                    <label>
+                        <input type="checkbox" id="showSelectedOnly">
+                        <span class='pub_tag favo'>Selected</span>
+                        <!-- <span class="count pub_tag" id="count-selected">(0)</span> -->
+                    </label>
+
+                    <!-- <label>
+                        <input type="checkbox" id="showSelectedOnly">
+                        <span class='pub_tag siggraph'>SIGGRAPH 
+                        <span class="count pub_tag" id="count-siggraph">(0)</span></span>
+                    </label>
+
+                    <label>
+                        <input type="checkbox" id="showSelectedOnly">
+                        <span class='pub_tag cvpr'>CVPR <span class="count pub_tag" id="count-cvpr">(0)</span> </span>
+                        
+                    </label>
+
+                    <label>
+                        <input type="checkbox" id="showSelectedOnly">
+                        <span class='pub_tag vis'>VIS 
+                        <span class="count pub_tag" id="count-vis">(0)</span></span>
+                    </label>
+
+                    <label>
+                        <input type="checkbox" id="showSelectedOnly">
+                        <span class='pub_tag chi'>CHI 
+                        <span class="count pub_tag" id="count-chi">(0)</span></span>
+                    </label> -->
+                </div>
+
+                <!-- <label><input type="checkbox" id="showSelectedOnly"> <span class='pub_tag'>Selected</span> </label> -->
+                <!-- <label><input type="checkbox" id="showSelectedOnly"> <span class='pub_tag siggraph'>SIGGRAPH</span> </label> -->
+            </div>
+         
                 <div class="oneproject">
                     <div class="project_img">
                         <img src="project_img/gu_cycle.gif"/>
@@ -115,9 +153,9 @@
                         <p class="paper_intro"> We introduce a human-AI co-creative system that generates a grid of icons in a coherent style, along two axes: semantic richness (what is depicted) and style diversity (how much detail). </p>
                         <br>
                     </div>
-                </div>
+                </div>               
 
-                <div class="oneproject">
+                <div class="oneproject selected_project">
                     <div class="project_img">
                         <img src="project_img/collage.gif"/>
                     </div>
@@ -130,15 +168,14 @@
                         <br>
                         [<a href="pub/SIGGRAPH25_collage.pdf">Paper (26.2 MB)</a>] 
                         [<a href="https://szuviz.github.io/pixel-space-collage-technique/">Project Homepage</a>]
-                        [<a href="https://github.com/SZUVIZ/image-space-collage-techqniue">Source Code</a>]
                         <!-- [<a href="pub/StickyLinks2024_minlu.mp4"> My Talk at PacificVis 2024 (32.4 MB)</a>] -->
                         </p>
-                        <p class="paper_intro"> We introduce a versatile image-space technique designed to pack geometric elements into a given shape, and demonstrate its diverse visual expressiveness in various applications.
+                        <p class="paper_intro"> We introduce a versatile image-space collage technique designed to pack geometric elements into a given shape, and demonstrate its diverse visual expressiveness in various applications.
                         <br>
                     </div>
                 </div>
 
-                <div class="oneproject">
+                <div class="oneproject selected_project cvpr_project">
                     <div class="project_img">
                         <img src="project_img/layered_vec.gif"/>
                     </div>
@@ -151,7 +188,6 @@
                         <br>
                         [<a href="https://arxiv.org/pdf/2406.05404">Paper (41.8 MB)</a>] 
                         [<a href="https://szuviz.github.io/layered_vectorization/">Project Homepage</a>]
-                        [<a href="https://github.com/SZUVIZ/layered_vectorization/tree/main">Source Code</a>]
                         <!-- [<a href="pub/StickyLinks2024_minlu.mp4"> My Talk at PacificVis 2024 (32.4 MB)</a>] -->
                         </p>
                         <p class="paper_intro">We present a layered image vectorization technique with image simplification, that reconstructs the raster image as layer-wise vectors from semantic-aligned macro structures to finer details.
@@ -168,7 +204,7 @@
                         <p class="project_title">Creative Blends of Visual Concepts</p>
                         <!-- <br> -->
                         <p class="project_author">Zhida Sun, Zhenyao Zhang, Yue Zhang, Min Lu*, Dani Lischinski, Daniel Cohen-Or, and Hui Huang</p>
-                        <p><span class='pub_tag chi'>CHI</span> Proceedings of the CHI Conference on Human Factors in Computing Systems, 2025.
+                        <p><span class='pub_tag chi'>CHI</span> Proceedings of the 2025 CHI conference on human factors in computing systems, 2025.
                        
                         <br>
                         [<a href="https://arxiv.org/abs/2502.16062">Paper (25.3 MB)</a>] 
@@ -181,7 +217,7 @@
                 </div>
 
 
-                <div class="oneproject">
+                <div class="oneproject selected_project">
                     <div class="project_img">
                         <img src="project_img/pro_spikes.png"/>
                     </div>
@@ -200,7 +236,7 @@
                     </div>
                 </div>
 
-                <div class="oneproject">
+                <div class="oneproject selected_project">
                     <div class="project_img">
                         <img src="project_img/pro_ant.png"/>
                     </div>
@@ -218,7 +254,7 @@
                     </div>
                 </div>
 
-                <div class="oneproject">
+                <div class="oneproject selected_project">
                         <div class="project_img">
                             <img src="project_img/pro_jnd.png"/>
                         </div>
@@ -237,7 +273,7 @@
                 </div>
 
 
-                <div class="oneproject">
+                <div class="oneproject selected_project">
                     <div class="project_img">
                         <img src="project_img/pro_vif.png"/>
                     </div>
@@ -245,7 +281,7 @@
                         <p class="project_title">Exploring Visual Information Flows in Infographics</p>
                         <!-- <br> -->
                         <p class="project_author">Min Lu*, Chufeng Wang, Joel Lanir, Nanxuan Zhao, Hanspeter Pfister, Daniel Cohen-Or and Hui Huang</p>
-                        <p><span class='pub_tag chi'>CHI</span> Proceedings of the CHI Conference on Human Factors in Computing Systems, 2020.
+                        <p><span class='pub_tag chi'>CHI</span> Proceedings of the 2020 CHI conference on human factors in computing systems, 2020.
                         <br>
                         [<a class='paper_resource' href="pub/CHI20_VIF.pdf">Paper (2.0 MB)</a> ]   
                         [<a class='paper_resource' href="https://drive.google.com/file/d/1yd7lwVMoGdza6eAng1w_JBm7RwF0lrP1/view?usp=sharing"> InfoVIF dataset </a> ]					
@@ -257,7 +293,7 @@
             </div>
 
 
-                <div class="oneproject">
+                <div class="oneproject selected_project">
                     <div class="project_img">
                         <img src="project_img/pro_winglets.png"/>
                     </div>
@@ -294,7 +330,7 @@
                 </div>
             </div>
 
-            <div class="oneproject">
+            <div class="oneproject selected_project">
                 <div class="project_img">
                     <img src="project_img/pro_interactionplus2.png"/>
                 </div>
@@ -311,7 +347,7 @@
                 </div>
             </div> 
 
-            <div class="oneproject">
+            <div class="oneproject selected_project">
                 <div class="project_img">
                     <img src="project_img/pro_trajrank.jpg"/>
                 </div>
@@ -402,5 +438,77 @@
             this.classList.add('active');
         });
     });
+</script>
+
+<script>
+    document.getElementById('showSelectedOnly').addEventListener('change', function() {
+        const allElements = document.querySelectorAll('.oneproject, .selected_project');
+        const isChecked = this.checked;
+        
+        if (isChecked) {
+            // 先隐藏所有元素
+            allElements.forEach(el => {
+                el.style.display = 'none';
+            });
+            
+            // 只显示 .selected_project
+            const selectedProjects = document.querySelectorAll('.selected_project');
+            selectedProjects.forEach(el => {
+                el.style.display = '';
+            });
+        } else {
+            // 显示所有元素
+            allElements.forEach(el => {
+                el.style.display = '';
+            });
+        }
+    });
+</script>
+
+<script>
+    // 统计各类标签的论文数量
+    function countPapersByTag() {
+        // 统计所有 .oneproject 中的论文
+        const allProjects = document.querySelectorAll('.oneproject');
+        
+        let counts = {
+            selected: 0,
+            siggraph: 0,
+            cvpr: 0,
+            vis: 0,
+            chi: 0
+        };
+        
+        allProjects.forEach(project => {
+            // 统计有 .selected_project 类的项目
+            if (project.classList.contains('selected_project')) {
+                counts.selected++;
+            }
+            
+            // 统计论文中的各种标签
+            const tags = project.querySelectorAll('.pub_tag');
+            tags.forEach(tag => {
+                if (tag.classList.contains('siggraph')) counts.siggraph++;
+                if (tag.classList.contains('cvpr')) counts.cvpr++;
+                if (tag.classList.contains('vis')) counts.vis++;
+                if (tag.classList.contains('chi')) counts.chi++;
+            });
+        });
+        console.log(counts.selected, counts.siggraph, counts.cvpr, counts.vis, counts.chi)
+        // 更新显示
+        document.getElementById('count-selected').textContent = counts.selected;
+        document.getElementById('count-siggraph').textContent = counts.siggraph;
+        document.getElementById('count-cvpr').textContent = counts.cvpr;
+        document.getElementById('count-vis').textContent = counts.vis;
+        console.log('vis = ', counts.vis)
+        document.getElementById('count-chi').textContent = counts.chi;
+        
+        console.log('统计结果:', counts);
+    }
+    
+    // 页面加载时执行统计
+    countPapersByTag();
+    
+    // 如果未来有动态添加论文的需求，可以在添加后重新调用 countPapersByTag()
 </script>
 </html>
