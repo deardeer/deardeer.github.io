@@ -8,7 +8,7 @@ body {
   background-size: cover; /* 这会确保图片铺满整个body */
   background-repeat: no-repeat; /* 防止图片重复 */
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   font-family: "Barlow";
   font-size: 15px;
 }
@@ -26,29 +26,43 @@ body a {
 }
 .content .head {
   background-color: #90D26D;
-  display: fixed;
+  padding: 0.6em 1.4em 0 1.4em;
 }
 .content .head ul {
   display: flex;
-  justify-content: space-around;
+  align-items: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 4px;
 }
 .content .head ul li {
   list-style-type: none;
+  flex: 1;
 }
 .content .head ul li a {
   text-decoration: none;
   font-family: "Roboto Condensed";
-  font-size: 1.2em;
-  color: white;
+  font-size: 1.1em;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.88);
+  display: block;
+  padding: 0.45em 0;
+  text-align: center;
+  border-radius: 8px 8px 0 0;
+  background-color: rgba(255, 255, 255, 0.18);
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 .content .head ul li .nav-button:hover {
-  background-color: #2e7d32;
-  transition: background-color 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.35);
+  color: white;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 .content .head ul li .nav-button.active {
-  background-color: #ffc107;
-  color: white;
-  transition: background-color 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.96);
+  color: #2e7d32;
+  font-weight: 700;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 .content .hero {
   display: flex;
