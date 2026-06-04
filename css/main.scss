@@ -9,7 +9,7 @@ body{
     background-size: cover; /* 这会确保图片铺满整个body */
     background-repeat: no-repeat; /* 防止图片重复 */
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     font-family: 'Barlow';
     font-size: 15px;
     p{
@@ -51,7 +51,7 @@ body{
                 }
                 
                 .nav-button.active {
-                    background-color: #ffc107;
+                    background-color: rgb(19, 126, 2);
                     color: white;
                     transition: background-color 0.3s ease;
                 }
@@ -97,7 +97,7 @@ body{
             p{
                 line-height: 1.5;
                 a{
-                    color: #FF9800;
+                    color: rgb(3, 93, 178);
                     text-decoration: none;
                 }
             }

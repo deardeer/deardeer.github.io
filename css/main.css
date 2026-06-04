@@ -26,43 +26,29 @@ body a {
 }
 .content .head {
   background-color: #90D26D;
-  padding: 0.6em 1.4em 0 1.4em;
+  display: fixed;
 }
 .content .head ul {
   display: flex;
-  align-items: flex-end;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 4px;
+  justify-content: space-around;
 }
 .content .head ul li {
   list-style-type: none;
-  flex: 1;
 }
 .content .head ul li a {
   text-decoration: none;
   font-family: "Roboto Condensed";
-  font-size: 1.1em;
-  letter-spacing: 0.04em;
-  color: rgba(255, 255, 255, 0.88);
-  display: block;
-  padding: 0.45em 0;
-  text-align: center;
-  border-radius: 8px 8px 0 0;
-  background-color: rgba(255, 255, 255, 0.18);
-  transition: background-color 0.2s ease, color 0.2s ease;
+  font-size: 1.2em;
+  color: white;
 }
 .content .head ul li .nav-button:hover {
-  background-color: rgba(255, 255, 255, 0.35);
-  color: white;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  background-color: #2e7d32;
+  transition: background-color 0.3s ease;
 }
 .content .head ul li .nav-button.active {
-  background-color: rgba(255, 255, 255, 0.96);
-  color: #2e7d32;
-  font-weight: 700;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  background-color: rgb(19, 126, 2);
+  color: white;
+  transition: background-color 0.3s ease;
 }
 .content .hero {
   display: flex;
@@ -101,7 +87,7 @@ body a {
   line-height: 1.5;
 }
 .content .hero .briefdiv p a {
-  color: #FF9800;
+  color: rgb(3, 93, 178);
   text-decoration: none;
 }
 .content .hero .briefdiv .contactdiv {
